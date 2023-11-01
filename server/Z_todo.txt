@@ -1,0 +1,6 @@
+1. HR Dashboard module will include 
+  A. HR Signup
+  B. HR Login 
+  C. Forgot Password
+  D. Dashboard with Welcome HR Message 
+  E.  Logout 
