@@ -7,7 +7,7 @@ require("./config/connection")
 const user = require("./models/HR")
  const cookieparser = require('cookie-parser')
 // PORT
-const PORT = process.env.PORT || 4000;
+const PORT =  4000;
 
 const path = require('path')
 
