@@ -1,14 +1,14 @@
 const jwt = require('jsonwebtoken')
 
 const user = require("../models/HR")
-
+const secreat=  require('../config/key')
 const auth = async(req,res,next) =>{
 
     try{
      
         const token = req.headers.authorization;
        
-        const verifytoken = jwt.verify(token , process.env.SECRETE_KEY)
+        const verifytoken = jwt.verify(token , secreat.secret_jwt_key)
       
 
         

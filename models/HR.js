@@ -106,7 +106,7 @@ schema.methods.generateAuthToken =async  function(){
  
      try {
 
-          let token  = jwt.sign({_id:this._id},process.env.SECRETE_KEY,{
+          let token  = jwt.sign({_id:this._id},key.secret_jwt_key,{
             expiresIn:'100d'
           })
 

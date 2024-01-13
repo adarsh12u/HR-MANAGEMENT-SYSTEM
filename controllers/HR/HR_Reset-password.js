@@ -1,7 +1,7 @@
 const bcryptjs = require('bcryptjs');
 const  model = require('../../models/HR')
 const jwt = require('jsonwebtoken')
-
+const srcreat = require('../../config/key')
 
 const Reset_password_HR = async(req,res)=>{
     const securecpassword = async(e) =>{
@@ -13,7 +13,7 @@ const Reset_password_HR = async(req,res)=>{
 try {
 
     const{ id, token} = req.params
-    const verifytokens = jwt.verify(token , process.env.SECRETE_KEY)
+    const verifytokens = jwt.verify(token , srcreat.secret_jwt_key)
     
  
  

@@ -1,7 +1,7 @@
 const SMTP = {
 
-   username: process.env.user,
-   password : process.env.password  
+   username: 'bunty8962682360@gmail.com',
+   password :'fvqqqqzhmpmbxttp'
 }
 
 module.exports = SMTP

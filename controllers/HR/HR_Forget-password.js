@@ -1,7 +1,7 @@
 const model = require("../../models/HR");
 const nodemailer = require("nodemailer");
 const SMTP = require("../../config/SMTP");
-
+const secreat = require('../../config/key')
 const jwt = require("jsonwebtoken");
 // console.log('<p> Hii '+name+'Plese copy the link <a  href =" http://localhost:5000/api/reset-password?token=+'+token+'"> reset </a>')
 // mail send
@@ -58,7 +58,7 @@ const Forget_password_HR = async (req, res) => {
     if (data) {
       const one_time_token = jwt.sign(
         { _id: data._id },
-        process.env.SECRETE_KEY,
+        secreat.secret_jwt_key,
         {
           expiresIn: "10m",
         }

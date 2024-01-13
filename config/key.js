@@ -1,6 +1,6 @@
 const key = {
 
-   secret_jwt_key : process.env.SECREATE_KEY
+   secret_jwt_key : "backendisbackboneofwebsites?/!@#$%bhdutijfduihdv[]'/dcfgyufu"
 
 }
 
