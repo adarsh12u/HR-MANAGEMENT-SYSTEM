@@ -29,7 +29,7 @@ Route.get('/valid',auth,valid_hr)
 Route.get('/profile',auth,HR_Profile)
 Route.post('/forget-password',Forget_password_HR)
 Route.post('/reset-password/:id/:token' , Reset_password_HR)
-
+Route.get('/login',HR.log_Hr)
 
 
 // Client Routes

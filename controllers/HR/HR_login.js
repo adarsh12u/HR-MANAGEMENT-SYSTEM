@@ -99,7 +99,12 @@ const logout_Hr = (req,res)=>{
    res.clearCookier('jwtToken')
 
 }
+const log_Hr = (req,res)=>{
+  
+  res.status(200).send("successfully")
+  
 
+}
 
-module.exports = {logout_Hr,login_Hr
+module.exports = {logout_Hr,login_Hr,log_Hr
 }// module.exports  =crete_token
