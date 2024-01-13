@@ -9,7 +9,15 @@ const user = require("./models/HR")
 // PORT
 const PORT = process.env.PORT || 4000;
 
-// middleware
+const path = require('path')
+
+// app.use(express.static(path.join(__dirname , './client/app/build')))
+
+app.get('/',(req,res)=>{
+    app.use(express.static(path.resolve(__dirname , "frontend","build")))
+     res.sendFile(path.resolve(__dirname , "frontend","build","index.html"))
+})
+// middlew
 app.use(cors());
 app.use(cookieparser());
 app.use(express.json());
