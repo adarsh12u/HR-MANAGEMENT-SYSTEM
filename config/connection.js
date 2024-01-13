@@ -2,7 +2,12 @@ const mongoose =  require("mongoose");
 
 const url = 'mongodb+srv://adarsh:adarsh@mernapp.rkth39c.mongodb.net/test?retryWrites=true&w=majority'
 
-mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(url, {useNewUrlParser: true,
+  autoIndex: false,
+ 
+  connectTimeoutMS: 10000,
+  family: 4,
+  useUnifiedTopology: true})
 mongoose.connection.on('connected', () => {
     console.log('Connected to database');
   });
