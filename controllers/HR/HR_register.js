@@ -29,7 +29,7 @@ const securecpassword = async (HR_Confirmpassword) => {
 };
 
 const register_Hr = async (req, res) => {
-const{signup} = req.body
+const signup = req.body
     try {
      if (!(signup.HR_Confirmpassword === signup.HR_password)) 
         {
