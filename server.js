@@ -25,7 +25,9 @@ app.use(express.urlencoded({extended:true}))
 
 app.use('/api',Routes)
 
-
+app.get('/api/login',(req,res)=>{
+     res.send("helloa")
+})
 
 
 // create server
